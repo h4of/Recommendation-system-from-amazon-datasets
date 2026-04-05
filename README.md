@@ -243,8 +243,8 @@ Final Score = 0.7 × normalize(ALS_score) + 0.3 × normalize(Content_score)
 
 | Thành viên | Phần phụ trách |
 |---|---|
-| Nguyễn Thế Hùng | Part 1 – Data Preprocessing ✅ |
-| Thân Tiến Đạt | Part 2 – Collaborative Filtering + Evaluation ✅|
+| Nguyễn Thế Hùng | Part 1 – Data Preprocessing |
+| Thân Tiến Đạt | Part 2 – Collaborative Filtering + Evaluation|
 | Trần Thế Hưng | Part 3 – Content-based Filtering |
 | Nguyễn Trung Kiên | Part 4 – Hybrid System + Cold Start |
 | Vũ Huy Hoàng | Part 5 – Demo Web |
