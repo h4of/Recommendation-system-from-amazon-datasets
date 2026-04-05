@@ -94,7 +94,7 @@ Recommendation-system-from-amazon-datasets/
 
 ## Phân chia công việc
 
-### Part 1 – Data Preprocessing ✅
+### Part 1 – Data Preprocessing
 
 **Mục tiêu**: Tạo dataset sạch cho các mô hình downstream.
 
@@ -116,7 +116,7 @@ Recommendation-system-from-amazon-datasets/
 
 ---
 
-### Part 2 – Collaborative Filtering (ALS) + Evaluation ✅
+### Part 2 – Collaborative Filtering (ALS) + Evaluation
 
 **Mục tiêu**: Xây dựng mô hình học từ hành vi người dùng và đánh giá toàn bộ hệ thống.
 
@@ -165,14 +165,14 @@ ALS(
 
 ---
 
-### Part 3 – Content-based Filtering 🔄
+### Part 3 – Content-based Filtering
 
 **Mục tiêu**: Gợi ý dựa trên nội dung sản phẩm, xử lý Cold Start.
 
-**Kỹ thuật**: Cosine Similarity trên SBERT embeddings (đã có từ Part 1) hoặc TF-IDF
+**Kỹ thuật**: Cosine Similarity trên SBERT embeddings (đã có từ Part 1)
 
 **Các bước thực hiện:**
-- Load `item_embedding.parquet` (SBERT 384-dim)
+- Load `item_embedding.parquet`
 - Tính cosine similarity giữa các cặp items
 - Với mỗi item → lưu top-K items tương tự nhất
 
@@ -184,7 +184,7 @@ ALS(
 
 ---
 
-### Part 4 – Hybrid System + Cold Start Logic 🔄
+### Part 4 – Hybrid System + Cold Start Logic
 
 **Mục tiêu**: Kết hợp ALS và Content-based, xử lý mọi trường hợp người dùng.
 
@@ -211,7 +211,7 @@ Final Score = 0.7 × normalize(ALS_score) + 0.3 × normalize(Content_score)
 
 ---
 
-### Part 5 – Demo Web 🔄
+### Part 5 – Demo Web
 
 **Mục tiêu**: Giao diện trực quan để demo toàn bộ hệ thống.
 
