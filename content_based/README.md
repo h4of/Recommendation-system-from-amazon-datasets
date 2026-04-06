@@ -1,4 +1,4 @@
-# content_based_engine v2
+# content_based_engine
 
 Bản tối giản hơn, bám sát notebook hơn.
 
