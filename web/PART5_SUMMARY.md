@@ -1,15 +1,14 @@
-# Part 5 - Demo Web 🎉 HOÀN THÀNH
+# Part 5 - Demo Web 
 
-## ✅ Kết quả hoàn thiện
+##  Kết quả hoàn thiện
 
-Tôi đã hoàn thiện **Part 5 - Demo Web** cho dự án Recommendation System với đầy đủ:
 
 ### 🔧 Backend API (FastAPI)
 
 **File:** `web/backend/main.py`
 
 ```python
-✅ 6 API Endpoints:
+ 6 API Endpoints:
    - GET  /health                           # Health check
    - GET  /recommend/popular?top_k=20       # Popular items
    - GET  /recommend/user/{user_id}         # User recommendations
@@ -17,7 +16,7 @@ Tôi đã hoàn thiện **Part 5 - Demo Web** cho dự án Recommendation System
    - POST /recommend/new-user               # Cold start recommendations
    - GET  /metadata/{item_id}               # Product details
 
-✅ Features:
+ Features:
    • CORS middleware for frontend
    • Parquet data loading (final_recommendations, popular_items)
    • Content-based engine integration
