@@ -31,10 +31,10 @@ Raw Data (Amazon Office Products)
         └─────────────────────┘
                    │
                    ▼
-        ┌─────────────────────────────┐
-        │  Part 5: Web Demo           │
-        │  (FastAPI + HTML/JS) ✅     │
-        └─────────────────────────────┘
+        ┌─────────────────────┐
+        │  Part 5: Web Demo   │
+        │  (FastAPI + React)  │
+        └─────────────────────┘
 ```
 
 ---
@@ -228,98 +228,6 @@ Final Score = 0.7 × normalize(ALS_score) + 0.3 × normalize(Content_score)
 
 ---
 
-### Part 5 – Demo Web ✅ HOÀN THÀNH
-
-**Mục tiêu**: Giao diện trực quan để demo toàn bộ hệ thống.
-
-**Tech stack**: FastAPI (backend) + HTML/JS (frontend)
-
-**Các bước thực hiện:**
-- Build FastAPI server với 6 endpoints
-- Load dữ liệu từ Parts 1-4 (parquet files)
-- Tích hợp content-based engine để tìm sản phẩm tương tự
-- Xây dựng 4 trang HTML interactive với Bootstrap 5
-- Implement CORS middleware cho frontend-backend communication
-- Tạo responsive CSS design cho mobile/tablet/desktop
-
-**API Endpoints:**
-
-| Endpoint | Method | Purpose |
-|----------|--------|---------|
-| `/health` | GET | Health check |
-| `/recommend/popular` | GET | Hiển thị sản phẩm phổ biến |
-| `/recommend/user/{user_id}` | GET | Gợi ý cho người dùng (Hybrid) |
-| `/recommend/item/{item_id}` | GET | Sản phẩm tương tự (Content-based) |
-| `/recommend/new-user` | POST | Gợi ý cho người dùng mới (Cold Start) |
-| `/metadata/{item_id}` | GET | Lấy thông tin sản phẩm |
-
-**Frontend Pages:**
-
-| Trang | File | Chức năng |
-|-------|------|---------|
-| Homepage | `index.html` | Hiển thị Top 20 popular products |
-| User Recs | `recommend.html` | Nhập user_id → Top-15 recommendations (Hybrid) |
-| Similar | `similar.html` | Nhập item_id → Top-15 similar products |
-| Cold Start | `coldstart.html` | Thêm interactions → Recommendations (Content-based) |
-
-**Key Features:**
-- ✅ Responsive design (Bootstrap 5)
-- ✅ Real-time API requests (Fetch API)
-- ✅ Error handling & loading states
-- ✅ URL parameters support (e.g., `?user_id=ABC`)
-- ✅ Product metadata display
-- ✅ Navigation between pages
-- ✅ Interactive Swagger UI (`/docs`)
-
-**Output:**
-- Functional web application serving all parts
-- Backend API on `http://localhost:8000`
-- Frontend accessible via browser
-- Complete documentation & deployment guides
-
-**Files Generated:**
-```
-web/
-├── backend/
-│   ├── main.py              # FastAPI application
-│   ├── schemas.py           # Pydantic data models
-│   ├── config.py            # Configuration management
-│   ├── requirements.txt      # Python dependencies
-│   └── __init__.py
-├── frontend/
-│   ├── index.html           # Homepage
-│   ├── recommend.html       # User recommendations
-│   ├── similar.html         # Similar products
-│   ├── coldstart.html       # New user (cold start)
-│   └── style.css            # Global styles
-├── run.py                   # Python runner script
-├── run.bat                  # Windows batch script
-├── run.sh                   # Linux/Mac bash script
-├── README.md                # Complete web documentation
-├── API_TESTING.md           # cURL & Python API examples
-├── DEPLOYMENT.md            # Production deployment guide
-├── STRUCTURE.md             # Architecture documentation
-├── STATUS.md                # Completion status
-└── .env.example             # Environment variables
-```
-
-**Quick Start:**
-```bash
-cd web
-pip install -r backend/requirements.txt
-python run.py
-# Open http://localhost:8000
-```
-
-**Deployment Options:**
-- 🐍 Python script: `python run.py`
-- 🪟 Windows batch: `run.bat`
-- 🐧 Linux/Mac bash: `bash run.sh`
-- 🐳 Docker: `docker-compose up`
-- ☁️ Cloud (AWS/GCP/Azure): See `DEPLOYMENT.md`
-
----
-
 ## Kết quả dự kiến
 
 | Model | RMSE | Precision@10 | Recall@10 | NDCG@10 |
@@ -333,21 +241,10 @@ python run.py
 
 ## Nhóm thực hiện
 
-| Thành viên | Phần phụ trách | Status |
-|---|---|---|
-| Nguyễn Thế Hùng | Part 1 – Data Preprocessing | ✅ |
-| Thân Tiến Đạt | Part 2 – Collaborative Filtering + Evaluation | ✅ |
-| Trần Thế Hưng | Part 3 – Content-based Filtering | ✅ |
-| Nguyễn Trung Kiên | Part 4 – Hybrid System + Cold Start | ✅ |
-| Vũ Huy Hoàng | Part 5 – Demo Web | ✅ **COMPLETE** |
-
----
-
-## Quick Links
-
-- 📚 [Web Demo Documentation](web/README.md) - Complete guide for Part 5
-- 🚀 [Quick Start Guide](QUICKSTART.md) - 5-minute setup
-- 🧪 [API Testing Examples](web/API_TESTING.md) - cURL, Python, Swagger
-- 📋 [Deployment Guide](web/DEPLOYMENT.md) - Production setup
-- 🏗️ [Architecture Overview](web/STRUCTURE.md) - System design
-- ✅ [Part 5 Status](web/STATUS.md) - Completion checklist
+| Thành viên | Phần phụ trách |
+|---|---|
+| Nguyễn Thế Hùng | Part 1 – Data Preprocessing |
+| Thân Tiến Đạt | Part 2 – Collaborative Filtering + Evaluation|
+| Trần Thế Hưng | Part 3 – Content-based Filtering |
+| Nguyễn Trung Kiên | Part 4 – Hybrid System + Cold Start |
+| Vũ Huy Hoàng | Part 5 – Demo Web |
